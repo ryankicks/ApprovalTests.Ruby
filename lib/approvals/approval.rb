@@ -50,7 +50,7 @@ module Approvals
       end
 
       unless received_matches?
-        fail_with "Received file \"#{received_path}\" does not match approved \"#{approved_path}\"."
+        fail_with "Received file \"#{received_path}\" does not match approved \"#{approved_path}\".\n\n\tApproved: #{approved_text}\n\n\tReceived: #{received_text}"
       end
 
       success!
